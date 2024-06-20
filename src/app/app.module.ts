@@ -9,6 +9,7 @@ import { VideosComponent } from './pages/videos/videos.component';
 import { ButtonBackComponent } from './components/button-back/button-back.component';
 import { HomeCardComponent } from './components/home-card/home-card.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
