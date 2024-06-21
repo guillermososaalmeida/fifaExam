@@ -1,7 +1,7 @@
 //! COLOURS
 //* BLUE
 $primary-blue: #154285;
-$grey-blue: #292844;
+$grey-blue: #2f2e4b;
 $dark-blue: #0a0926;
 $gradient-end: #174385;
 
@@ -14,6 +14,9 @@ $yellow: #f0c52b;
 
 //* TEXT
 $white: #ffffff;
+
+//*GRADIENTS
+$dark-blur: linear-gradient(to right, $dark-blue, $grey-blue);
 
 //! MEASURES
 //* PADDING

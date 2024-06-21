@@ -9,15 +9,28 @@
       {{ 'language' | translate }}
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="switchLanguage(languages.SPANISH)">
+      <button
+        mat-menu-item-extended
+        (click)="switchLanguage(languages.SPANISH)"
+      >
         Español
       </button>
-      <button mat-menu-item (click)="switchLanguage(languages.ENGLISH)">
+
+      <button
+        mat-menu-item-extended
+        (click)="switchLanguage(languages.ENGLISH)"
+      >
         English
+        <img src=".." alt="United Kingdom" />
       </button>
-      <button mat-menu-item (click)="switchLanguage(languages.CATALAN)">
+      <button
+        mat-menu-item-extended
+        (click)="switchLanguage(languages.CATALAN)"
+      >
         Català
+        <img src="./icons/bandera-cat.png" alt="Catalonia" />
       </button>
     </mat-menu>
   </mat-toolbar-row>
+  <mat-toolbar-row class="second-toolbar"> </mat-toolbar-row>
 </mat-toolbar>
