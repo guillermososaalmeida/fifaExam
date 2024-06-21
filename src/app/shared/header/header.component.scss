@@ -1,10 +1,21 @@
 @import '../../../styles/variables';
 
 .header {
-  background-color: $primary-red;
+  background: $dark-blur;
   color: $white;
   border-bottom: $grey-blue 0.1px solid;
   box-shadow: 0px 0px 8px 0px $grey-blue;
   text-align: center;
   font-weight: bold;
+
+  img {
+    max-height: 15px;
+    max-width: 15px;
+  }
+
+  .first-toolbar {
+    height: 20px;
+  }
+  .second-toolbar {
+  }
 }
