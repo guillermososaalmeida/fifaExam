@@ -1,1 +1,12 @@
-<p>home-card works!</p>
+<button class="card" (click)="navigateToDetails()">
+  <div class="card-inner">
+    <div class="card-front">
+      <img
+        [src]="imagePlayer"
+        alt="image player" />
+    </div>
+    <div class="card-back">
+      <p>Ver detalles</p>
+    </div>
+  </div>
+</button>
