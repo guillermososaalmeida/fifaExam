@@ -16,6 +16,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 import { provideTranslation } from './config/translate-loader.config';
+import { SharedModule } from './shared/shared.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -35,6 +36,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     AppRoutingModule,
     TranslateModule.forRoot(provideTranslation()),
+    SharedModule
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
