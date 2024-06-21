@@ -1,1 +1,23 @@
-<p>header works!</p>
+<mat-toolbar class="header">
+  <mat-toolbar-row class="first-toolbar">
+    <button
+      mat-button-extended
+      [matMenuTriggerFor]="menu"
+      class="language-button"
+      aria-label="Language"
+    >
+      {{ 'language' | translate }}
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="switchLanguage(languages.SPANISH)">
+        Español
+      </button>
+      <button mat-menu-item (click)="switchLanguage(languages.ENGLISH)">
+        English
+      </button>
+      <button mat-menu-item (click)="switchLanguage(languages.CATALAN)">
+        Català
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
