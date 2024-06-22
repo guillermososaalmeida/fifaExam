@@ -1,1 +1,9 @@
-{ "language": "ES" }
+{
+  "@HEADER": "",
+  "language": "ES",
+  "details": "detalles",
+  "videos": "vídeos",
+
+  "@HOME": "",
+  "card-text": "Ver más"
+}

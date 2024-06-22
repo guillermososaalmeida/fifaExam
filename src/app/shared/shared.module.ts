@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LanguageMenuComponent } from '../components/language-menu/language-menu.component';
 import { BranchIndicatorComponent } from '../components/branch-indicator/branch-indicator.component';
+import { BreadcrumbComponent, BreadcrumbItemDirective } from 'xng-breadcrumb';
 
 //@MATERIAL
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -28,6 +29,8 @@ import { TranslateModule } from '@ngx-translate/core';
     MatToolbarModule,
     MatMenuModule,
     TranslateModule,
+    BreadcrumbComponent,
+    BreadcrumbItemDirective,
   ],
   exports: [HeaderComponent, FooterComponent],
 })
