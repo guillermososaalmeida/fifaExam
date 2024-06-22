@@ -7,10 +7,10 @@
   height: 15vh;
 
   .first-toolbar {
-    box-shadow: 0px 0px 8px 0px $grey-blue;
+    box-shadow: 0px 0px 6px 2px $grey-blue;
     border-bottom: $grey-blue 0.1px solid;
     background: $dark-blur;
-    height: 13vh;
+    height: 11vh;
     display: flex;
     justify-content: space-between;
     .logo {
@@ -25,7 +25,12 @@
     }
   }
   .second-toolbar {
-    height: 2vh;
+    height: 4vh;
     background: transparent;
+    box-shadow: 0px 0px 16px 0px $grey-blue;
+    color: $light-blue;
+    font-size: medium;
+    font-weight: 400;
+    text-transform: capitalize;
   }
 }

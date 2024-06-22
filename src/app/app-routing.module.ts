@@ -8,30 +8,50 @@ import { HomeComponent } from './pages/home/home.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
-    path: 'home', children: [
+    path: 'home',
+    data: {
+      breadcrumb: {
+        label: 'app home',
+        info: 'home',
+      },
+    },
+    children: [
       {
         path: '',
-        component: HomeComponent
+        component: HomeComponent,
       },
       {
-        path: 'details', children: [
+        path: 'details',
+        data: {
+          breadcrumb: {
+            label: 'details',
+            info: 'person',
+          },
+        },
+        children: [
           {
             path: '',
-            component: DetailsComponent
+            component: DetailsComponent,
           },
           {
             path: 'videos',
-            component: VideosComponent
-          }
-        ]
+            data: {
+              breadcrumb: {
+                label: 'videos',
+                info: 'ondemand_video',
+              },
+            },
+            component: VideosComponent,
+          },
+        ],
       },
     ],
   },
-  { path: '**', loadComponent: () => NotFoundComponent }
+  { path: '**', loadComponent: () => NotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

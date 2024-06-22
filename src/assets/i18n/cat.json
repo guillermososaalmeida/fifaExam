@@ -1,1 +1,9 @@
-{ "language": "CAT" }
+{
+  "@HEADER": "",
+  "language": "CAT",
+  "details": "detalls",
+  "videos": "vídeos",
+
+  "@HOME": "",
+  "card-text": "Veure més"
+}
