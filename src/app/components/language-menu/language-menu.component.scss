@@ -1,0 +1,22 @@
+@import '../../../styles/variables';
+
+.language-button {
+  padding: 1rem;
+  border-radius: 50%;
+  &:hover {
+    color: $primary-red;
+    transition: 0.5s;
+  }
+}
+.language-menu-button {
+  width: 100%;
+  span {
+    margin-right: 0.5rem;
+  }
+  img {
+    justify-self: end;
+    max-height: 25px;
+    max-width: 25px;
+    margin-left: 0;
+  }
+}

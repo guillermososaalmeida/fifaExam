@@ -11,9 +11,10 @@ import { MatMenuModule } from '@angular/material/menu';
 
 //@I18N
 import { TranslateModule } from '@ngx-translate/core';
+import { LanguageMenuComponent } from '../components/language-menu/language-menu.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent],
+  declarations: [HeaderComponent, FooterComponent, LanguageMenuComponent],
   imports: [
     CommonModule,
     MatButtonModule,
