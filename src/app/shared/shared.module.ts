@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { LanguageMenuComponent } from '../components/language-menu/language-menu.component';
+import { BranchIndicatorComponent } from '../components/branch-indicator/branch-indicator.component';
 
 //@MATERIAL
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -11,10 +13,14 @@ import { MatMenuModule } from '@angular/material/menu';
 
 //@I18N
 import { TranslateModule } from '@ngx-translate/core';
-import { LanguageMenuComponent } from '../components/language-menu/language-menu.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, LanguageMenuComponent],
+  declarations: [
+    HeaderComponent,
+    FooterComponent,
+    LanguageMenuComponent,
+    BranchIndicatorComponent,
+  ],
   imports: [
     CommonModule,
     MatButtonModule,
