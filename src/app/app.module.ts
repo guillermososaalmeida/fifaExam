@@ -10,13 +10,13 @@ import { ButtonBackComponent } from './components/button-back/button-back.compon
 import { HomeCardComponent } from './components/home-card/home-card.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { SharedModule } from './shared/shared.module';
 
 //Translate Import
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { provideTranslation } from './config/translate-loader.config';
-import { SharedModule } from './shared/shared.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
