@@ -11,8 +11,20 @@ export class BranchIndicatorComponent implements OnInit {
   router = inject(Router);
 
   branchName: string = '';
+  devBranch: boolean = false;
+  masterBranch: boolean = false;
 
   ngOnInit(): void {
-    this.branchName = this.activatedRoute.snapshot.params['branchName'];
+    window.location.href.includes('fifa-exam-develop')
+      ? (this.devBranch = true)
+      : window.location.href.includes('fifa-exam')
+        ? (this.masterBranch = true)
+        : null;
+
+    this.branchName = this.devBranch
+      ? 'Develop'
+      : this.masterBranch
+        ? 'Master'
+        : 'Localhost';
   }
 }
