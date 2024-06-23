@@ -1,6 +1,6 @@
 import { Component, Input, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { Player } from '../../classes/Player.class';
+import { CardInfo } from '../../models/card-info.model';
 
 @Component({
   selector: 'app-home-card',
@@ -10,9 +10,9 @@ import { Player } from '../../classes/Player.class';
 export class HomeCardComponent {
   private router = inject(Router);
 
-  @Input() player: Player = {} as Player;
+  @Input() card: CardInfo = {} as CardInfo;
 
   navigateToDetails(id: number): void {
-    this.router.navigate([`/home/details/${id}`]);
+    this.router.navigate([`home/details/${id} `]);
   }
 }

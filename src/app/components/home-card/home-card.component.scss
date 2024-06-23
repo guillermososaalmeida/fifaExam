@@ -17,6 +17,7 @@
 
 .card:hover .card-inner {
   transform: rotateY(180deg);
+  transition: 1.5s ease-out;
 }
 
 .card-front,
@@ -28,7 +29,7 @@
 }
 
 .card-front {
-  background: $dark-red;
+  background: $red-blur;
   border-radius: 10px;
 
   img {
@@ -36,16 +37,22 @@
     height: 100%;
     object-fit: cover;
     padding: 15px;
+    border-radius: 25px;
   }
 }
 
 .card-back {
-  background: $dark-red;
+  background: $red-blur;
   color: $white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   border-radius: 10px;
   justify-content: center;
   font-size: 24px;
   transform: rotateY(180deg);
+  text-shadow: 2px 2px 4px $dark-blue;
+  h2 {
+    font-size: xx-large;
+  }
 }

@@ -3,8 +3,8 @@ import { IPlayer } from '../models/player.model';
 import { Stats } from '../models/stats.model';
 
 export class Player implements IPlayer {
-  person: Person[];
-  stats: Stats[];
+  person: Person;
+  stats: Stats;
   number: number;
   debut: string;
   position: string;
