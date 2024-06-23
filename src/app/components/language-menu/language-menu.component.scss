@@ -12,6 +12,9 @@
   width: 100%;
   span {
     margin-right: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
   }
   img {
     justify-self: end;
