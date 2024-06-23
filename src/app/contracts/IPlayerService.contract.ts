@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Player } from '../classes/Player.class';
+import { CardInfo } from '../models/card-info.model';
 
 @Injectable()
 export abstract class IPlayerService {
-  public abstract getFilePlayers(): Observable<Player[]>;
+  public abstract getCardInfo(): Observable<CardInfo[]>;
 }
