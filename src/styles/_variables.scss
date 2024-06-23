@@ -7,7 +7,7 @@ $light-blue: #494865;
 
 //* RED
 $primary-red: #cc122e;
-$dark-red: #8f1a18;
+$red-blur: #8f1a18;
 
 //* YELLOW
 $yellow: #f0c52b;
@@ -17,7 +17,7 @@ $white: #ffffff;
 
 //*GRADIENTS
 $dark-blur: linear-gradient(to right, $dark-blue, $grey-blue);
-$dark-red: linear-gradient(to right, $primary-red, $dark-red);
+$red-blur: linear-gradient($primary-red, $red-blur);
 
 //! MEASURES
 //* PADDING

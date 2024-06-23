@@ -1,18 +1,5 @@
 <main>
-  <h3>Page Home!</h3>
-
   <section class="container-cards">
-    <!-- <app-home-card
-      imagePlayer="https://www.fcbarcelona.com/photo-resources/2023/10/16/ff41e75b-e652-4ab0-996c-2ffc5ab831d9/01-Panos.jpg?width=940&height=940"
-    ></app-home-card>
-    <app-home-card
-      imagePlayer="https://www.fcbarcelona.com/photo-resources/2023/10/16/ff41e75b-e652-4ab0-996c-2ffc5ab831d9/01-Panos.jpg?width=940&height=940"
-    ></app-home-card>
-    <app-home-card
-      imagePlayer="https://www.fcbarcelona.com/photo-resources/2023/10/16/ff41e75b-e652-4ab0-996c-2ffc5ab831d9/01-Panos.jpg?width=940&height=940"
-    ></app-home-card>
-    <app-home-card
-      imagePlayer="https://www.fcbarcelona.com/photo-resources/2023/10/16/30e9142a-c20b-44ae-adb4-c7ad361d8450/02-Paredes.jpg?width=940&height=940"
-    ></app-home-card> -->
+    <app-home-card *ngFor="let card of cards" [card]="card"></app-home-card>
   </section>
 </main>

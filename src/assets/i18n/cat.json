@@ -5,5 +5,9 @@
   "videos": "vídeos",
 
   "@HOME": "",
-  "card-text": "Veure més"
+  "card-text": "Veure més",
+
+  "@FOOTER": "",
+  "footer-rights": "Tots els drets reservats",
+  "footer-love": "Creat amb amor per Guillermo Sosa i Brisna Paez 💕"
 }
