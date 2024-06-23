@@ -21,7 +21,7 @@ const routes: Routes = [
         component: HomeComponent,
       },
       {
-        path: 'details',
+        path: 'details/:id',
         data: {
           breadcrumb: {
             label: 'details',
