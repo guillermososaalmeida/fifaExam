@@ -25,7 +25,13 @@
     "position": "Portera",
     "starter": true,
     "comment": "Experienced Portera with great reflexes.",
-    "img_url": "https://www.fcbarcelona.com/photo-resources/2023/10/16/ff41e75b-e652-4ab0-996c-2ffc5ab831d9/01-Panos.jpg?width=940&height=940"
+    "img_url": "https://www.fcbarcelona.com/photo-resources/2023/10/16/ff41e75b-e652-4ab0-996c-2ffc5ab831d9/01-Panos.jpg?width=940&height=940",
+    "videos": {
+      "first_video": "https://www.youtube.com/watch?v=tOELIy4KBd0",
+      "second_video": "https://www.youtube.com/watch?v=AnJj5En5Sbs",
+      "third_video": "https://www.youtube.com/watch?v=YrLgSfsjH7Q",
+      "fourth_video": "https://www.youtube.com/watch?v=axw7X1eApn4"
+    }
   },
   {
     "person": {
@@ -53,7 +59,13 @@
     "position": "Defensa",
     "starter": true,
     "comment": "Leader in defense, secure and experienced.",
-    "img_url": "https://www.fcbarcelona.com/photo-resources/2023/10/16/30e9142a-c20b-44ae-adb4-c7ad361d8450/02-Paredes.jpg?width=940&height=940"
+    "img_url": "https://www.fcbarcelona.com/photo-resources/2023/10/16/30e9142a-c20b-44ae-adb4-c7ad361d8450/02-Paredes.jpg?width=940&height=940",
+    "videos": {
+      "first_video": "https://www.youtube.com/watch?v=1vKjbM-WcBA",
+      "second_video": "https://www.youtube.com/watch?v=ri-C4wNo-f0",
+      "third_video": "https://www.youtube.com/watch?v=J1ApsOQgEPc",
+      "fourth_video": "https://www.youtube.com/watch?v=RvmPreUhfOc"
+    }
   },
   {
     "person": {
@@ -81,7 +93,13 @@
     "position": "Centrocampista",
     "starter": true,
     "comment": "Leader on the field, known for her playmaking and scoring ability.",
-    "img_url": "https://www.fcbarcelona.com/photo-resources/2023/10/16/74b498d2-032c-4d84-b24c-e8d7d0fa575b/11-Alexia.jpg?width=940&height=940"
+    "img_url": "https://www.fcbarcelona.com/photo-resources/2023/10/16/74b498d2-032c-4d84-b24c-e8d7d0fa575b/11-Alexia.jpg?width=940&height=940",
+    "videos": {
+      "first_video": "https://www.youtube.com/watch?v=4QfVWWnoIvY",
+      "second_video": "https://www.youtube.com/watch?v=lTaLAPgp3cI",
+      "third_video": "https://www.youtube.com/watch?v=d9MEzHmpCLU",
+      "fourth_video": "https://www.youtube.com/watch?v=-eY0KlIMv_I"
+    }
   },
   {
     "person": {
@@ -109,6 +127,12 @@
     "position": "Delantera",
     "starter": true,
     "comment": "Young and dynamic Delantera with a promising future.",
-    "img_url": "https://www.fcbarcelona.com/photo-resources/2023/10/16/f13c1c0c-df29-43f2-b24c-63c5d7da3fc8/07-Paralluelo.jpg?width=940&height=940"
+    "img_url": "https://www.fcbarcelona.com/photo-resources/2023/10/16/f13c1c0c-df29-43f2-b24c-63c5d7da3fc8/07-Paralluelo.jpg?width=940&height=940",
+    "videos": {
+      "first_video": "https://www.youtube.com/watch?v=bkF_eP1rics",
+      "second_video": "https://www.youtube.com/watch?v=Q7W-Q4Cpv58",
+      "third_video": "https://www.youtube.com/watch?v=7U1sw-R_BDo",
+      "fourth_video": "https://www.youtube.com/watch?v=sQZdD7nzPKI"
+    }
   }
 ]
