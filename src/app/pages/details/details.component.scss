@@ -88,6 +88,17 @@
           align-items: center;
           flex-direction: row-reverse;
           font-weight: 600;
+          animation: progress 0.5s ease-in-out forwards;
+          opacity: 0;
+          @keyframes progress {
+            0% {
+              width: 0;
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
           span {
             padding: 0.5rem;
           }
