@@ -12,6 +12,7 @@
         *xngBreadcrumbItem="let breadcrumb; let info = info; let first = first"
       >
         <mat-icon *ngIf="info">{{ info }}</mat-icon>
+        <span class="spacer"></span>
         <ng-container *ngIf="!first">{{ breadcrumb | translate }}</ng-container>
       </ng-container>
     </xng-breadcrumb>
