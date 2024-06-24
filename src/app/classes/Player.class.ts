@@ -11,6 +11,7 @@ export class Player implements IPlayer {
   starter: boolean;
   comment: string;
   img_url: string;
+  videos: string[];
 
   constructor(player: IPlayer) {
     this.person = player.person;
@@ -21,5 +22,6 @@ export class Player implements IPlayer {
     this.starter = player.starter;
     this.comment = player.comment;
     this.img_url = player.img_url;
+    this.videos = player.videos;
   }
 }

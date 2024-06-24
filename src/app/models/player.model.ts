@@ -1,5 +1,6 @@
 import { Person } from './person.model';
 import { Stats } from './stats.model';
+import { Videos } from './video.model';
 
 export interface IPlayer {
   person: Person;
@@ -10,4 +11,5 @@ export interface IPlayer {
   starter: boolean;
   comment: string;
   img_url: string;
+  videos: Videos[];
 }
