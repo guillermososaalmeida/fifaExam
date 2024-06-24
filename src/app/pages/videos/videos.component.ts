@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { PlayersService } from '../../services/player-services/player.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { Videos } from '../../models/videos.model';
+import { Player } from '../../classes/Player.class';
 
 @Component({
   selector: 'app-videos',
@@ -14,26 +14,35 @@ export class VideosComponent implements OnInit {
   private playerService = inject(PlayersService);
   private sanitizer = inject(DomSanitizer);
 
+  player: Player = {} as Player;
   private pathId = window.location.href.split('details').pop();
   private id = Number(this.pathId?.[1]);
-  videos: Videos[] = [];
+
+  videosPlayer: { key: string; value: string }[] = [];
 
   ngOnInit(): void {
-    this.playerService.getVideosById(this.id).subscribe(
-      (videos: Videos[]) => {
-        this.videos = videos;
-        console.log('videos', this.videos);
-
+    this.playerService.getPlayerById(this.id).subscribe({
+      next: (result: Player) => {
+        this.player = result;
+        this.videosPlayer = Object.entries(this.player.videos).map(([key, value]) => ({
+          key: key.toString(),
+          value: value.toString()
+        }));
+        console.log('Videos', this.videosPlayer);
       },
-      (error) => {
+      error: (error) => {
         console.error('Error fetching videos:', error);
-      });
+      }
+    });
   }
 
   getVideoYoutube(link: string): SafeResourceUrl {
-    const playerVideo = link.split('-v=')[1];
-    const embedUrl = `https://www.youtube.com/embed/${playerVideo}`;
-    return this.sanitizer.bypassSecurityTrustResourceUrl(embedUrl);
+    if (link !== undefined && link.includes('v=')) {
+      const videoPlayer = link.split('v=')[1];
+      const videoUrl = `https://www.youtube.com/embed/${videoPlayer}`;
+      return this.sanitizer.bypassSecurityTrustResourceUrl(videoUrl);
+    }
+    return this.sanitizer.bypassSecurityTrustResourceUrl('');
   }
 
 }

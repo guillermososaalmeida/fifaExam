@@ -1,10 +1,10 @@
-<main>
-  <p>videos works!</p>
+<main *ngIf="player && player.person">
+  <h2>{{ player.person.name }}</h2>
 
-  <div>
-    <div *ngFor="let video of videos">
-      <!-- <iframe [src]="getVideoYoutube(video)" frameborder="0" allowfullscreen></iframe> -->
+  <section class="container-videos">
+    <div class="video-element" *ngFor="let video of videosPlayer">
+      <iframe [src]="getVideoYoutube(video.value)" frameborder="0" allowfullscreen></iframe>
     </div>
-  </div>
+  </section>
 
 </main>
