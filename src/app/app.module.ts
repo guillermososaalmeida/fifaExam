@@ -11,6 +11,7 @@ import { HomeCardComponent } from './components/home-card/home-card.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { SharedModule } from './shared/shared.module';
+import { MatIconModule } from '@angular/material/icon';
 
 //Translate Import
 import { TranslateModule } from '@ngx-translate/core';
@@ -38,6 +39,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     TranslateModule.forRoot(provideTranslation()),
     SharedModule,
     HttpClientModule,
+    MatIconModule,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],

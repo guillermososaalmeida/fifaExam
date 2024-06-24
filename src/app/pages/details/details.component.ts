@@ -16,9 +16,17 @@ export class DetailsComponent implements OnInit {
   private pathId = window.location.href.split('/').pop();
   private id = Number(this.pathId?.split('%')[0]);
 
+  playerStats: { key: string; value: number }[] = [];
+
   ngOnInit(): void {
     this.playerService.getPlayerById(this.id).subscribe((result: Player) => {
       this.player = result;
+      this.playerStats = Object.entries(this.player.stats).map(
+        ([key, value]) => ({
+          key,
+          value,
+        }),
+      );
       console.log('player', this.player);
     });
   }

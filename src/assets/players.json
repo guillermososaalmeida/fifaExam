@@ -9,16 +9,13 @@
       "height": 1.69
     },
     "stats": {
-      "historicMatches": 120,
-      "historicGoals": 0,
-      "historicAssists": 2,
-      "historicCleanSheets": 80,
-      "historicSaves": 320,
-      "currentSeasonMatches": 20,
-      "currentSeasonGoals": 0,
-      "currentSeasonAssists": 1,
-      "currentSeasonCleanSheets": 12,
-      "currentSeasonSaves": 45
+      "acceleration": 44,
+      "stamina": 45,
+      "strength": 64,
+      "balance": 70,
+      "sprint speed": 50,
+      "agility": 54,
+      "jumping": 72
     },
     "number": 1,
     "debut": "2015-07-15",
@@ -43,16 +40,13 @@
       "height": 1.78
     },
     "stats": {
-      "historicMatches": 50,
-      "historicGoals": 6,
-      "historicAssists": 3,
-      "historicCleanSheets": 30,
-      "historicSaves": 0,
-      "currentSeasonMatches": 20,
-      "currentSeasonGoals": 2,
-      "currentSeasonAssists": 2,
-      "currentSeasonCleanSheets": 12,
-      "currentSeasonSaves": 0
+      "acceleration": 75,
+      "stamina": 85,
+      "strength": 82,
+      "balance": 65,
+      "sprint speed": 75,
+      "agility": 68,
+      "jumping": 79
     },
     "number": 2,
     "debut": "2021-07-08",
@@ -77,16 +71,13 @@
       "height": 1.73
     },
     "stats": {
-      "historicMatches": 200,
-      "historicGoals": 60,
-      "historicAssists": 40,
-      "historicCleanSheets": 0,
-      "historicSaves": 0,
-      "currentSeasonMatches": 18,
-      "currentSeasonGoals": 12,
-      "currentSeasonAssists": 10,
-      "currentSeasonCleanSheets": 0,
-      "currentSeasonSaves": 0
+      "acceleration": 82,
+      "stamina": 90,
+      "strength": 75,
+      "balance": 78,
+      "sprint speed": 78,
+      "agility": 76,
+      "jumping": 75
     },
     "number": 11,
     "debut": "2012-07-01",
@@ -111,16 +102,13 @@
       "height": 1.72
     },
     "stats": {
-      "historicMatches": 20,
-      "historicGoals": 10,
-      "historicAssists": 5,
-      "historicCleanSheets": 0,
-      "historicSaves": 0,
-      "currentSeasonMatches": 18,
-      "currentSeasonGoals": 7,
-      "currentSeasonAssists": 3,
-      "currentSeasonCleanSheets": 0,
-      "currentSeasonSaves": 0
+      "acceleration": 87,
+      "stamina": 86,
+      "strength": 70,
+      "balance": 90,
+      "sprint speed": 85,
+      "agility": 88,
+      "jumping": 79
     },
     "number": 7,
     "debut": "2022-07-01",
