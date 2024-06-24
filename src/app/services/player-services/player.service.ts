@@ -40,22 +40,6 @@ export class PlayersService implements IPlayerService {
     );
   }
 
-  getVideosById(id: number): Observable<string[]> {
-    return this.getFilePlayers().pipe(
-      map((players) => {
-        const player = players.find((p) => p.person.id === id);
-        if (!player) {
-          throw new Error('Video not found');
-        }
-        return Object.values(player.videos);
-      }),
-      catchError((error) => {
-        console.error('Error fetching video:', error);
-        return throwError(error);
-      })
-    );
-  }
-
   private getFilePlayers(): Observable<Player[]> {
     const path = '../../assets/players.json';
     return this.httpClient.get<IPlayer[]>(path).pipe(
