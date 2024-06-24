@@ -5,7 +5,11 @@ import { Player } from '../../classes/Player.class';
 import { IPlayer } from '../../models/player.model';
 import { CardInfo } from '../../models/card-info.model';
 import { IPlayerService } from '../../contracts/IPlayerService.contract';
+import { Injectable } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root',
+})
 export class PlayersService implements IPlayerService {
   private httpClient = inject(HttpClient);
 
@@ -20,6 +24,18 @@ export class PlayersService implements IPlayerService {
               img_url: player.img_url,
             }) as CardInfo,
         );
+      }),
+    );
+  }
+
+  getPlayerById(id: number): Observable<Player> {
+    return this.getFilePlayers().pipe(
+      map((players) => {
+        const player = players.find((p) => p.person.id === id);
+        if (!player) {
+          throw new Error('Player not found');
+        }
+        return player;
       }),
     );
   }
