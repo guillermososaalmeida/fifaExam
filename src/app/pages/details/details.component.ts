@@ -15,6 +15,7 @@ export class DetailsComponent implements OnInit {
   player: Player = {} as Player;
   private pathId = window.location.href.split('/').pop();
   private id = Number(this.pathId?.split('%')[0]);
+  routerPage = `home`
 
   playerStats: { key: string; value: number }[] = [];
 
