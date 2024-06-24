@@ -6,7 +6,7 @@ import { IPlayer } from '../../models/player.model';
 import { CardInfo } from '../../models/card-info.model';
 import { IPlayerService } from '../../contracts/IPlayerService.contract';
 import { Injectable } from '@angular/core';
-import { Videos } from '../../models/videos.model';
+// import { Videos } from '../../models/videos.model';
 
 @Injectable({
   providedIn: 'root',
@@ -38,22 +38,6 @@ export class PlayersService implements IPlayerService {
         }
         return player;
       }),
-    );
-  }
-
-  getVideosById(id: number): Observable<Videos[]> {
-    return this.getFilePlayers().pipe(
-      map((players) => {
-        const player = players.find((p) => p.person.id === id);
-        if (!player) {
-          throw new Error('Video not found');
-        }
-        return Object.values(player.videos);
-      }),
-      catchError((error) => {
-        console.error('Error fetching video:', error);
-        throw new Error('Player not found');
-      })
     );
   }
 
