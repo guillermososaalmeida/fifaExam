@@ -45,8 +45,8 @@ export class PlayersService implements IPlayerService {
         return decryptedData.map(decryptedData => new Player(decryptedData));
       }),
       catchError(error => {
-        console.error('Error al obtener y procesar los datos desencriptados:', error);
-        return throwError(() => 'Error al obtener y procesar los datos desencriptados');
+        console.error('Error obtaining and processing the decrypted data:', error);
+        return throwError(() => 'Error obtaining and processing the decrypted data');
       })
     );
   }
