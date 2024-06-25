@@ -37,9 +37,6 @@
       }
 
       button {
-        position: absolute;
-        bottom: 45%;
-        right: 3, 1%;
         background-color: $primary-red;
         color: white;
         padding: 10px 20px;
@@ -47,6 +44,15 @@
         border-radius: 0 10px 10px 0px;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        position: absolute;
+        bottom: 45%;
+        right: 3, 1%;
+
+        @media (max-width: 480px) {
+          bottom: 6.3%;
+          right: 30%;
+          border-radius: 0 10px 10px 10px;
+        }
 
         &:hover {
           background-color: darken($primary-red, 10%);
@@ -82,7 +88,7 @@
         background-color: lighten($light-blue, 30%);
         border-radius: 5px;
         overflow: hidden;
-        max-width: 50%;
+        max-width: 90%;
 
         .progress {
           height: 20px;
