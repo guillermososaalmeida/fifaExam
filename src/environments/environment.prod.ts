@@ -1,5 +1,5 @@
 export const environment = {
-  production: true,
+  production: false,
   apiUrl: '../assets/encryptedData.json',
-  password: 'micontraseñaultrasecreta'
+  password: 'micontraseñaultrasecreta',
 };
