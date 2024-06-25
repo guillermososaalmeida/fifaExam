@@ -1,7 +1,7 @@
 @import '../../../styles/variables';
 
 .card {
-  width: 360px;
+  width: 20vw;
   height: 100%;
   perspective: 1000px;
   cursor: pointer;
@@ -54,5 +54,12 @@
   text-shadow: 2px 2px 4px $dark-blue;
   h2 {
     font-size: xx-large;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 80vw;
+    height: 40vh;
   }
 }
