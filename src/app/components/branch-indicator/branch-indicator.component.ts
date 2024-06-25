@@ -1,5 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-branch-indicator',
@@ -7,12 +6,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './branch-indicator.component.scss',
 })
 export class BranchIndicatorComponent implements OnInit {
-  activatedRoute = inject(ActivatedRoute);
-  router = inject(Router);
-
   branchName: string = '';
-  devBranch: boolean = false;
-  masterBranch: boolean = false;
+  private devBranch: boolean = false;
+  private masterBranch: boolean = false;
 
   ngOnInit(): void {
     window.location.href.includes('fifa-exam-develop')
