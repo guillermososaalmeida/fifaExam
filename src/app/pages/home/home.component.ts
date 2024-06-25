@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { IPlayerService } from '../../contracts/IPlayerService.contract';
 import { PlayersService } from '../../services/player-services/player.service';
 import { CardInfo } from '../../models/card-info.model';
@@ -10,13 +10,13 @@ import { CardInfo } from '../../models/card-info.model';
   providers: [{ provide: IPlayerService, useClass: PlayersService }],
 })
 export class HomeComponent implements OnInit {
+  private playerService = inject(IPlayerService);
   cards: CardInfo[] = [];
-
-  constructor(private playerService: IPlayerService) {}
 
   ngOnInit(): void {
     this.playerService.getCardInfo().subscribe((cards) => {
       this.cards = cards;
+      console.log("🔴", this.cards)
     });
   }
 }
