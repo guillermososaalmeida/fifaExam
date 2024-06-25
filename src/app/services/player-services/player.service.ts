@@ -1,18 +1,16 @@
-import { HttpClient } from '@angular/common/http';
-import { inject } from '@angular/core';
 import { Observable, catchError, map, throwError } from 'rxjs';
 import { Player } from '../../classes/Player.class';
 import { IPlayer } from '../../models/player.model';
 import { CardInfo } from '../../models/card-info.model';
 import { IPlayerService } from '../../contracts/IPlayerService.contract';
-import { Injectable } from '@angular/core';
-// import { Videos } from '../../models/videos.model';
+import { Injectable, inject } from '@angular/core';
+import { EncryptionService } from '../encryp-services/encryption.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PlayersService implements IPlayerService {
-  private httpClient = inject(HttpClient);
+  private encryptionService = inject(EncryptionService);
 
   getCardInfo(): Observable<CardInfo[]> {
     return this.getFilePlayers().pipe(
@@ -42,15 +40,14 @@ export class PlayersService implements IPlayerService {
   }
 
   private getFilePlayers(): Observable<Player[]> {
-    const path = '../../assets/players.json';
-    return this.httpClient.get<IPlayer[]>(path).pipe(
-      map((response: IPlayer[]) => {
-        return response.map((player) => new Player(player));
+    return this.encryptionService.decryptFile().pipe(
+      map((decryptedData: IPlayer[]) => { 
+        return decryptedData.map(decryptedData => new Player(decryptedData));
       }),
-      catchError((error) => {
-        console.error('Error fetching players data', error);
-        return throwError(() => new Error('Error fetching players data'));
-      }),
+      catchError(error => {
+        console.error('Error al obtener y procesar los datos desencriptados:', error);
+        return throwError(() => 'Error al obtener y procesar los datos desencriptados');
+      })
     );
   }
 }
