@@ -28,7 +28,6 @@ export class DetailsComponent implements OnInit {
           value,
         }),
       );
-      console.log('player', this.player);
     });
   }
 

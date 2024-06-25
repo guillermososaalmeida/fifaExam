@@ -27,7 +27,6 @@ export class VideosComponent implements OnInit {
           key: key.toString(),
           value: value.toString()
         }));
-        console.log('Videos', this.videosPlayer);
       },
       error: (error) => {
         console.error('Error fetching videos:', error);
