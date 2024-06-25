@@ -6,15 +6,15 @@ import { Player } from '../../classes/Player.class';
 import { environment } from '../../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EncryptionService {
-  private http = inject(HttpClient)
-  apiUrl = environment.apiUrl;
-  password = environment.password;
+  private http = inject(HttpClient);
+  private apiUrl = environment.apiUrl;
+  private password = environment.password;
 
   decryptFile(): Observable<Player[]> {
-    const encryptedFilePath = this.apiUrl; 
+    const encryptedFilePath = this.apiUrl;
 
     return this.http.get(encryptedFilePath, { responseType: 'text' }).pipe(
       map((encryptedFileContent: string) => {
@@ -30,14 +30,15 @@ export class EncryptionService {
           return decryptedData;
         } catch (error) {
           console.error('Error al desencriptar:', error);
-          throw error; 
+          throw error;
         }
       }),
-      catchError(error => {
+      catchError((error) => {
         console.error('Error al obtener el archivo encriptado:', error);
-        return throwError(() => new Error('Error al obtener el archivo encriptado'));
-      })
+        return throwError(
+          () => new Error('Error al obtener el archivo encriptado'),
+        );
+      }),
     );
   }
-
 }

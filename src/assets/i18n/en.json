@@ -17,6 +17,10 @@
   "agility": "Agility",
   "jumping": "Jumping",
 
+  "@PAGENOTFOUND": "",
+  "error-message": "Error 404: Page not found",
+  "return-message": "Return to the home page",
+
   "@FOOTER": "",
   "footer-rights": "All rights reserved",
   "footer-love": "Created with love by Guillermo Sosa and Brisna Paez 💕"

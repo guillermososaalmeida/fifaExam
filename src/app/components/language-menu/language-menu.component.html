@@ -9,33 +9,13 @@
 <mat-menu #menu="matMenu">
   <button
     mat-menu-item
-    (click)="switchLanguage(languages.SPANISH)"
+    *ngFor="let language of languages"
+    (click)="switchLanguage(language.code)"
     class="language-menu-button"
   >
-    <span
-      >Español
-      <img src="../../../assets/icons/bandera-es.png" alt="Spain" />
-    </span>
-  </button>
-
-  <button
-    mat-menu-item
-    (click)="switchLanguage(languages.ENGLISH)"
-    class="language-menu-button"
-  >
-    <span
-      >English
-      <img src="../../../assets/icons/bandera-uk.png" alt="United Kingdom" />
-    </span>
-  </button>
-  <button
-    mat-menu-item
-    (click)="switchLanguage(languages.CATALAN)"
-    class="language-menu-button"
-  >
-    <span
-      >Català
-      <img src="../../../assets/icons/bandera-cat.png" alt="Catalonia" />
+    <span>
+      {{ language.name }}
+      <img [src]="language.img" [alt]="language.alt" />
     </span>
   </button>
 </mat-menu>
