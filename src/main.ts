@@ -8,6 +8,5 @@ platformBrowserDynamic()
   .catch((err) => console.error(err));
 
 if (environment.production) {
-  console.log(environment.production);
   window.console.log = () => {};
 }
