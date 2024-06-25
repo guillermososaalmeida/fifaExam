@@ -1,0 +1,23 @@
+{
+  "@HEADER": "",
+  "language": "ES",
+  "details": "detalles",
+  "videos": "vídeos",
+
+  "@HOME": "",
+  "card-text": "Ver más",
+
+  "@DETAILS": "",
+  "stats": "Estadísticas",
+  "acceleration": "Aceleración",
+  "stamina": "Resistencia",
+  "strength": "Fuerza",
+  "balance": "Equilibrio",
+  "sprint speed": "Velocidad de sprint",
+  "agility": "Agilidad",
+  "jumping": "Salto",
+
+  "@FOOTER": "",
+  "footer-rights": "Todos los derechos reservados",
+  "footer-love": "Creado con amor por Guillermo Sosa y Brisna Paez 💕"
+}

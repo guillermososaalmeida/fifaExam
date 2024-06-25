@@ -1,0 +1,23 @@
+{
+  "@HEADER": "",
+  "language": "CAT",
+  "details": "detalls",
+  "videos": "vídeos",
+
+  "@HOME": "",
+  "card-text": "Veure més",
+
+  "@DETAILS": "",
+  "stats": "Estadístiques",
+  "acceleration": "Acceleració",
+  "stamina": "Resistència",
+  "strength": "Força",
+  "balance": "Equilibri",
+  "sprint speed": "Velocitat de sprint",
+  "agility": "Agilitat",
+  "jumping": "Salt",
+
+  "@FOOTER": "",
+  "footer-rights": "Tots els drets reservats",
+  "footer-love": "Creat amb amor per Guillermo Sosa i Brisna Paez 💕"
+}
