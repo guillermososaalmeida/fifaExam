@@ -28,4 +28,12 @@
   &:active {
     transform: translateY(3px);
   }
+
+
+}
+
+@media (max-width: 768px) {
+  .go-back {
+    bottom: 10px;
+  }
 }

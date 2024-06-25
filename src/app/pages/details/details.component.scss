@@ -56,6 +56,9 @@
   }
 
   .player-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 50%;
     height: 100%;
 
@@ -80,6 +83,7 @@
         border-radius: 5px;
         overflow: hidden;
         max-width: 50%;
+
         .progress {
           height: 20px;
           background-color: $yellow;
@@ -90,20 +94,31 @@
           font-weight: 600;
           animation: progress 0.5s ease-in-out forwards;
           opacity: 0;
+
           @keyframes progress {
             0% {
               width: 0;
               opacity: 0;
             }
+
             100% {
               opacity: 1;
             }
           }
+
           span {
             padding: 0.5rem;
           }
         }
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .player-details {
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 0;
   }
 }

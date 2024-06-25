@@ -47,4 +47,18 @@
       font-size: 1rem;
     }
   }
+
+  @media (max-width: 768px) {
+    .container-contact{
+      height: auto;
+    }
+
+    .mat-toolbar-row, .mat-toolbar-single-row {
+      flex-direction: column;
+    }
+
+    .container-text > p, .container-contact > p {
+      font-size: 12px;
+    }
+  }
 }
