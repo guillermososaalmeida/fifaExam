@@ -17,6 +17,10 @@
   "agility": "Agilitat",
   "jumping": "Salt",
 
+  "@PAGENOTFOUND": "",
+  "error-message": "Error 404: Pàgina no trobada",
+  "return-message": "Torna a la pàgina d'inici",
+
   "@FOOTER": "",
   "footer-rights": "Tots els drets reservats",
   "footer-love": "Creat amb amor per Guillermo Sosa i Brisna Paez 💕"

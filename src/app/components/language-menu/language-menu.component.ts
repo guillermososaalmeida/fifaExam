@@ -1,6 +1,9 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Language } from '../../shared/enums/language.enum';
+import { LanguageCodes } from '../../shared/enums/language-codes.enum';
+import { LanguageNames } from '../../shared/enums/language-names.enum';
+import { LanguageImages } from '../../shared/enums/language-images.enum';
+import { LanguageAlts } from '../../shared/enums/language-alts.enum';
 
 @Component({
   selector: 'app-language-menu',
@@ -8,11 +11,30 @@ import { Language } from '../../shared/enums/language.enum';
   styleUrl: './language-menu.component.scss',
 })
 export class LanguageMenuComponent implements OnInit {
-  translator = inject(TranslateService);
-  readonly languages = Language; //readonly is used to prevent the languages property from being modified
+  private translator = inject(TranslateService);
+  readonly languages = [
+    {
+      code: LanguageCodes.SPANISH,
+      name: LanguageNames.SPANISH,
+      img: LanguageImages.SPANISH,
+      alt: LanguageAlts.SPANISH,
+    },
+    {
+      code: LanguageCodes.ENGLISH,
+      name: LanguageNames.ENGLISH,
+      img: LanguageImages.ENGLISH,
+      alt: LanguageAlts.ENGLISH,
+    },
+    {
+      code: LanguageCodes.CATALAN,
+      name: LanguageNames.CATALAN,
+      img: LanguageImages.CATALAN,
+      alt: LanguageAlts.CATALAN,
+    },
+  ];
 
   ngOnInit() {
-    this.translator.setDefaultLang(Language.SPANISH);
+    this.translator.setDefaultLang(LanguageCodes.SPANISH);
   }
 
   switchLanguage(language: string) {

@@ -17,6 +17,10 @@
   "agility": "Agilidad",
   "jumping": "Salto",
 
+  "@PAGENOTFOUND": "",
+  "error-message": "Error 404: Página no encontrada",
+  "return-message": "Volver a la página de inicio",
+
   "@FOOTER": "",
   "footer-rights": "Todos los derechos reservados",
   "footer-love": "Creado con amor por Guillermo Sosa y Brisna Paez 💕"
